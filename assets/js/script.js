@@ -39,7 +39,7 @@ $(document).ready(function () {
 
     // <!-- emailjs to mail contact form data -->
     $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+        emailjs.init("");
 
         emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
             .then(function (response) {
@@ -79,85 +79,72 @@ var typed = new Typed(".typing-text", {
 });
 // <!-- typed js effect ends -->
 
-// async function fetchData(type = "skills") {
-//     let response
-//     type === "skills" ?
-//         response = await fetch("skills.json")
-//         :
-//         response = await fetch("./projects/projects.json")
-//     const data = await response.json();
-//     return data;
-// }
+// Dummy data: Replace this with your JSON or fetch call
+const projects = [
+    {
+        name: "churn",
+        desc: "Customer churn is a significant issue for many businesses, and predicting churn can help companies take preventive actions. This project provides a web-based platform for predicting customer churn using a machine learning model. The platform is built using Streamlit, a popular Python framework for creating web applications with ease.",
+        image: "churn", 
+        codeLink: "https://github.com/STALPHA2708/ChurnModel"
+    },
+    {
+        name: "Project 1",
+        desc: "Description of Project 1",
+        image: "project1",
+        codeLink: "https://github.com/your-username/project1"
+    },
+    {
+        name: "Project 1",
+        desc: "Description of Project 1",
+        image: "project1",
+        codeLink: "https://github.com/your-username/project1"
+    },
+    {
+        name: "Project 1",
+        desc: "Description of Project 1",
+        image: "project1",
+        codeLink: "https://github.com/your-username/project1"
+    },
+    {
+        name: "Project 1",
+        desc: "Description of Project 1",
+        image: "project1",
+        codeLink: "https://github.com/your-username/project1"
+    },
+    {
+        name: "Project 2",
+        desc: "Description of Project 2",
+        image: "project2",
+        codeLink: "https://github.com/your-username/project2"
+    }
+  ];
+  
+  // Function to display the projects
+function displayProjects() {
+    const projectContainer = document.querySelector('.project-container');
+    let projectHTML = '';
 
-// function showSkills(skills) {
-//     let skillsContainer = document.getElementById("skillsContainer");
-//     let skillHTML = "";
-//     skills.forEach(skill => {
-//         skillHTML += `
-//         <div class="bar">
-//             <div class="info">
-//                 <img src=${skill.icon} alt="skill" />
-//                 <span>${skill.name}</span>
-//             </div>
-//             </div>`
-//     });
-//     skillsContainer.innerHTML = skillHTML;
-// }
-
-function showProjects(projects) {
-    let projectsContainer = document.querySelector("#work .box-container");
-    let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
-        projectHTML += `
-        <div class="box tilt">
-        <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-        <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
+projects.forEach(project => {
+    projectHTML += `
+        <div class="project-box">
+         <img src="./assets/images/projects/${project.image}.png" alt="${project.name}">
+          <div class="content">
+            <h3>${project.name}</h3>
+            <p>${project.desc}</p>
+            <div class="btns">
+              <a href="${project.codeLink}" target="_blank" class="btn">View Code</a>
+            </div>
+          </div>
         </div>
-        <div class="desc">
-        <p>${project.desc}</p>
-        <div class="btns">
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-        </div>
-        </div>
-        </div>
-    </div>`
+      `;
     });
-    projectsContainer.innerHTML = projectHTML;
-
-    // <!-- tilt js effect starts -->
-    VanillaTilt.init(document.querySelectorAll(".tilt"), {
-        max: 15,
-    });
-    // <!-- tilt js effect ends -->
-
-    /* ===== SCROLL REVEAL ANIMATION ===== */
-    const srtop = ScrollReveal({
-        origin: 'top',
-        distance: '80px',
-        duration: 1000,
-        reset: true
-    });
-
-    /* SCROLL PROJECTS */
-    srtop.reveal('.work .box', { interval: 200 });
-
-}
-
-fetchData().then(data => {
-    showSkills(data);
-});
-
-fetchData("projects").then(data => {
-    showProjects(data);
-});
-
-// <!-- tilt js effect starts -->
-VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    max: 15,
-});
-// <!-- tilt js effect ends -->
+  
+    projectContainer.innerHTML = projectHTML;
+  }
+  
+  // Call the function to display projects on page load
+document.addEventListener('DOMContentLoaded', displayProjects);
+  
 
 
 // pre loader start
@@ -203,48 +190,52 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 
 
 /* ===== SCROLL REVEAL ANIMATION ===== */
-const srtop = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
-});
+// // Call the function to display projects on page load
+// document.addEventListener('DOMContentLoaded', displayProjects);
 
-/* SCROLL HOME */
-srtop.reveal('.home .content h3', { delay: 200 });
-srtop.reveal('.home .content p', { delay: 200 });
-srtop.reveal('.home .content .btn', { delay: 200 });
+// // ScrollReveal (optional)
+// const srtop = ScrollReveal({
+//   origin: 'bottom',
+//   distance: '50px',
+//   duration: 1000,
+//   reset: true
+// });
 
-srtop.reveal('.home .image', { delay: 400 });
-srtop.reveal('.home .linkedin', { interval: 600 });
-srtop.reveal('.home .github', { interval: 800 });
-srtop.reveal('.home .twitter', { interval: 1000 });
-srtop.reveal('.home .telegram', { interval: 600 });
-srtop.reveal('.home .instagram', { interval: 600 });
-srtop.reveal('.home .dev', { interval: 600 });
+// /* SCROLL HOME */
+// srtop.reveal('.home .content h3', { delay: 100 });
+// srtop.reveal('.home .content p', { delay: 100 });
+// srtop.reveal('.home .content .btn', { delay: 100 });
 
-/* SCROLL ABOUT */
-srtop.reveal('.about .content h3', { delay: 200 });
-srtop.reveal('.about .content .tag', { delay: 200 });
-srtop.reveal('.about .content p', { delay: 200 });
-srtop.reveal('.about .content .box-container', { delay: 200 });
-srtop.reveal('.about .content .resumebtn', { delay: 200 });
+// srtop.reveal('.home .image', { delay: 400 });
+// srtop.reveal('.home .linkedin', { interval: 600 });
+// srtop.reveal('.home .github', { interval: 800 });
+// srtop.reveal('.home .twitter', { interval: 1000 });
+// srtop.reveal('.home .telegram', { interval: 600 });
+// srtop.reveal('.home .instagram', { interval: 600 });
+// srtop.reveal('.home .dev', { interval: 600 });
+
+// /* SCROLL ABOUT */
+// srtop.reveal('.about .content h3', { delay: 200 });
+// srtop.reveal('.about .content .tag', { delay: 200 });
+// srtop.reveal('.about .content p', { delay: 200 });
+// srtop.reveal('.about .content .box-container', { delay: 200 });
+// srtop.reveal('.about .content .resumebtn', { delay: 200 });
 
 
-/* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
+// /* SCROLL SKILLS */
+// srtop.reveal('.skills .container', { interval: 200 });
+// srtop.reveal('.skills .container .bar', { delay: 400 });
 
-/* SCROLL EDUCATION */
-srtop.reveal('.education .box', { interval: 200 });
+// /* SCROLL EDUCATION */
+// srtop.reveal('.education .box', { interval: 200 });
 
-/* SCROLL PROJECTS */
-srtop.reveal('.work .box', { interval: 200 });
+// /* SCROLL PROJECTS */
+// srtop.reveal('.project-box', { interval: 200 });
 
-/* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline', { delay: 400 });
-srtop.reveal('.experience .timeline .container', { interval: 400 });
+// /* SCROLL EXPERIENCE */
+// srtop.reveal('.experience .timeline', { delay: 400 });
+// srtop.reveal('.experience .timeline .container', { interval: 400 });
 
-/* SCROLL CONTACT */
-srtop.reveal('.contact .container', { delay: 400 });
-srtop.reveal('.contact .container .form-group', { delay: 400 });
+// /* SCROLL CONTACT */
+// srtop.reveal('.contact .container', { delay: 400 });
+// srtop.reveal('.contact .container .form-group', { delay: 400 });
