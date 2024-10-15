@@ -82,28 +82,28 @@ var typed = new Typed(".typing-text", {
 // Dummy data: Replace this with your JSON or fetch call
 const projects = [
     {
-        name: "churn",
+        name: "Churn Model",
         desc: "Customer churn is a significant issue for many businesses, and predicting churn can help companies take preventive actions. This project provides a web-based platform for predicting customer churn using a machine learning model. The platform is built using Streamlit, a popular Python framework for creating web applications with ease.",
-        image: "churn", 
+        image: "A Smarter Way To Reduce Customer Churn", 
         codeLink: "https://github.com/STALPHA2708/ChurnModel"
     },
     {
-        name: "Project 1",
-        desc: "Description of Project 1",
-        image: "project1",
-        codeLink: "https://github.com/your-username/project1"
+        name: "Credit-Card-Clustering",
+        desc: "Clustering credit cards is a data-driven technique used to group credit card customers into different segments based on their spending behavior, demographic information, or financial attributes. This is typically done to identify distinct customer profiles, tailor marketing strategies, manage risk, or optimize credit card offers.",
+        image: "Banking card design",
+        codeLink: "https://github.com/STALPHA2708/Credit-Card-Clustering"
     },
     {
-        name: "Project 1",
-        desc: "Description of Project 1",
-        image: "project1",
-        codeLink: "https://github.com/your-username/project1"
+        name: "AI VS Human",
+        desc: "Detecting AI-generated content involves building a machine learning model that classifies text data. This project demonstrates expertise in handling imbalanced datasets, implementing robust classification models, and using both traditional machine learning techniques and deep learning frameworks to achieve accurate detection.",
+        image: "AI VS HUMAN",
+        codeLink: "https://github.com/STALPHA2708/AI-Vs-Human"
     },
     {
-        name: "Project 1",
-        desc: "Description of Project 1",
-        image: "project1",
-        codeLink: "https://github.com/your-username/project1"
+        name: "Impact of Activities on Academic Performance",
+        desc: "This project investigates the effect of extracurricular activities on students' academic performance through data analysis and visualization. The study explores how students manage time between activities and academics. This project demonstrates my ability to collect, analyze, and interpret survey data using visualizations and statistical techniques.",
+        image: "data",
+        codeLink: "https://github.com/STALPHA2708/ProjetIntegrer"
     },
     {
         name: "Project 1",

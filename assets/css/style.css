@@ -122,6 +122,12 @@ header .navbar ul li a:hover {
   border-bottom: 0.2rem solid #c267ff;
   padding: 0.5rem 0;
 }
+@media (max-width: 768px) {
+  header .navbar.nav-toggle {
+      right: 0;
+  }
+}
+
 /* navbar ends */
 
 /* hamburger icon starts*/
@@ -659,14 +665,17 @@ header .navbar ul li a:hover {
   color: #946dad; /* Customize this to your theme color */
 }
 
+/* Project container */
 .project-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   align-items: center;
+  padding: 3rem 10%;
 }
 
+/* Individual project card */
 .project-container .project-box {
   width: 300px;
   border-radius: 10px;
@@ -674,51 +683,59 @@ header .navbar ul li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   transition: transform 0.3s;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
 }
 
+/* Image inside project card (No changes to image scale) */
 .project-container .project-box img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 8px;
 }
 
-.project-container .project-box .content {
-  padding: 1rem;
-}
-
+/* Title inside project card */
 .project-container .project-box h3 {
   font-size: 1.8rem;
+  margin-bottom: 1rem;
   color: #333;
+  padding: 0.5rem 0; /* Adds padding around the title */
+  line-height: 1.4;  /* Makes the text more readable */
 }
 
+/* Description text inside project card */
 .project-container .project-box p {
   font-size: 1.4rem;
-  margin: 0.5rem 0;
   color: #666;
+  margin-bottom: 1.5rem; /* Space between description and button */
+  padding: 0.5rem 0; /* Adds padding around the text */
+  line-height: 1.6; /* Increases readability */
 }
 
-.project-container .project-box .btns {
-  display: flex;
-  justify-content: space-between;
-}
-
+/* Button inside project card */
 .project-container .project-box .btn {
+  display: inline-block;
   background-color: #946dad;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 2rem;
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 1.2rem;
-  transition: background-color 0.3s;
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 1rem;
+  text-align: center; /* Space between text and button */
 }
 
 .project-container .project-box .btn:hover {
   background-color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.project-container .project-box:hover {
-  transform: translateY(-10px);
-}
+
+
 
 /* hamburger icon ends */
 
@@ -1172,6 +1189,169 @@ form .button-area {
   }
 }
 /* common media queries ends*/
+/* Add this near the bottom of style.css */
+@media (max-width: 768px) {
+  /* General styles for screens smaller than 768px */
+  html {
+      font-size: 55%;
+  }
+  section {
+      padding: 2rem 5%;
+  }
+  .heading {
+      font-size: 2.5rem;
+  }
+  /* Navbar for small screens */
+  header .navbar {
+      position: fixed;
+      top: 6.5rem;
+      right: -120%;
+      width: 75%;
+      height: 100%;
+      text-align: left;
+      background-color: #0e0f31;
+  }
+
+  header .navbar.nav-toggle {
+      right: 0;
+  }
+
+  header .navbar ul {
+      flex-direction: column;
+      padding: 1rem;
+  }
+
+  header .navbar ul li {
+      margin: 1rem 0;
+      text-align: center;
+  }
+
+  .home {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .home .image img {
+      margin: 2rem auto;
+      width: 80%;
+  }
+
+  .home .content h2 {
+      font-size: 3.5rem;
+  }
+
+  .home .content p {
+      font-size: 2rem;
+  }
+
+  /* About Section */
+  .about .row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about .row .image img {
+      width: 80%;
+      margin: 2rem auto;
+  }
+
+  .about .row .content {
+      padding: 1rem;
+  }
+
+  .about .row .content h3 {
+      font-size: 2rem;
+  }
+
+  .about .row .content p {
+      font-size: 1.5rem;
+  }
+
+  /* Projects Section */
+  .project-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .project-container .project-box {
+      width: 90%;
+      margin-bottom: 2rem;
+  }
+
+  /* Experience Section */
+  .experience .timeline::after {
+      left: 31px;
+  }
+  .experience .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+  }
+
+  .experience .left, .experience .right {
+      left: 0;
+  }
+
+  /* Contact Section */
+  .contact .container .content {
+      flex-direction: column;
+  }
+  .contact .container .image-box {
+      display: none;
+  }
+  .contact .container form {
+      width: 100%;
+      margin-right: 0;
+  }
+
+  /* Footer Section */
+  .footer .box-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 450px) {
+  /* General styles for screens smaller than 450px */
+  html {
+      font-size: 50%;
+  }
+  .heading {
+      font-size: 2rem;
+  }
+
+  .home .content h2 {
+      font-size: 2.8rem;
+  }
+  .home .content p {
+      font-size: 1.6rem;
+  }
+
+  .about .row .content p {
+      font-size: 1.3rem;
+  }
+
+  .project-container .project-box h3 {
+      font-size: 1.6rem;
+  }
+
+  .project-container .project-box p {
+      font-size: 1.2rem;
+  }
+
+  .form-group .field input, .form-group .message textarea {
+      font-size: 1.4rem;
+  }
+
+  .footer .box-container .box {
+      margin: 1.5rem;
+  }
+  .footer .box-container .box p {
+      padding: 0.7rem;
+  }
+  .footer .box-container .box .share a {
+      padding: 1.2rem;
+  }
+}
 
 /* scroll top starts */
 #scroll-top {
