@@ -106,10 +106,10 @@ const projects = [
         codeLink: "https://github.com/STALPHA2708/ProjetIntegrer"
     },
     {
-        name: "Project 1",
-        desc: "Description of Project 1",
-        image: "project1",
-        codeLink: "https://github.com/your-username/project1"
+        name: "Face Landmarks Detection",
+        desc: "This project focuses on detecting key facial landmarks, such as eyes, nose, mouth, and jawline, using CV and ML techniques. Applications include facial recognition, emotion analysis, augmented reality filters, and improving human-computer interaction. It demonstrates proficiency in leveraging AI for real-time facial feature analysis and tracking.",
+        image: "landmarks",
+        codeLink: "https://github.com/STALPHA2708/FaceLandmarkDetection"
     },
     {
         name: "Project 2",
