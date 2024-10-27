@@ -112,10 +112,10 @@ const projects = [
         codeLink: "https://github.com/STALPHA2708/FaceLandmarkDetection"
     },
     {
-        name: "Project 2",
-        desc: "Description of Project 2",
-        image: "project2",
-        codeLink: "https://github.com/your-username/project2"
+        name: "Amazon Recommendation System",
+        desc: "This project demonstrates how to build a recommendation system for Amazon-style product recommendations using Python. The system provides personalized recommendations based on product similarity and review scores, leveraging collaborative filtering techniques with minimal dependencies. Plus Fast API",
+        image: "recomendation",
+        codeLink: "https://github.com/STALPHA2708/Amzon-RecSys"
     }
   ];
   
