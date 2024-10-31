@@ -97,11 +97,22 @@
             </div>
         </div>
         
-        <div class="resumebtn">
-            <a href="https://drive.google.com/drive/folders/1hQzzv1ELWdXwiALehfUvns3JTtWTUL_f?usp=sharing" target="_blank" class="btn"><span>Resume</span>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
+              <div class="resumebtn">
+                <!-- Hidden Checkbox to Control Toggle -->
+                <input type="checkbox" id="toggleCV" class="toggle-checkbox" />
+              
+                <!-- Label that Looks Like a Button -->
+                <label for="toggleCV" class="btn">
+                  <span>Resume</span>
+                  <i class="fas fa-chevron-right"></i>
+                </label>
+              
+                <!-- Hidden Buttons for CV Options -->
+                <div class="cv-options">
+                  <a href="https://drive.google.com/path-to-french-cv" target="_blank" class="btn"><span>CV Français</span></a>
+                  <a href="https://drive.google.com/path-to-english-cv" target="_blank" class="btn"><span>English CV</span></a>
+                </div>
+              </div>
 
     </div>
     </div>
