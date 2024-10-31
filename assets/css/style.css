@@ -477,6 +477,7 @@ header .navbar ul li a:hover {
   display: block;
   margin-top: 1rem;
 }
+
 /* about media queries starts*/
 @media screen and (max-width: 600px) {
   .about .row .image {
@@ -767,7 +768,6 @@ header .navbar ul li a:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-
 .view-all-btn .btn {
   display: inline-block;
   padding: 1.5rem 1rem; /* Adjust the padding for a button-like appearance */
@@ -785,6 +785,7 @@ header .navbar ul li a:hover {
 .view-all-btn .btn:hover {
   background-color: #000000; /* Change color on hover to match the other button */
 }
+
 
 
 /* hamburger icon ends */
