@@ -418,7 +418,14 @@ header .navbar ul li a:hover {
 }
 .resumebtn {
   margin-top: 6rem;
+  /* position: relative; */
 }
+
+.toggle-checkbox {
+  display: none; /* Hide the checkbox */
+}
+
+/* Style the label like a button */
 .resumebtn .btn {
   padding: 1.7rem 3rem;
   border-radius: 0.5em;
@@ -427,22 +434,48 @@ header .navbar ul li a:hover {
   background: #946dad;
   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
+  display: block;
+  display: inline-block; /* Change to inline-block to fit content */
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  width: 18rem;
+  margin-bottom: 1rem;
 }
+
 .resumebtn .btn span {
   font-weight: 600;
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
 }
+
 .resumebtn .btn i {
   margin-left: 0.3rem;
   font-size: 1.2rem;
   transition: 0.3s;
 }
+
 .resumebtn .btn:hover {
   background: #000000;
 }
+
 .resumebtn .btn:hover i {
   transform: translateX(5px);
+}
+
+/* Hidden by default */
+.cv-options {
+  display: none;
+}
+
+/* Show .cv-options when checkbox is checked */
+.toggle-checkbox:checked ~ .cv-options {
+  display: block;
+}
+
+.cv-options .btn {
+  display: block;
+  margin-top: 1rem;
 }
 /* about media queries starts*/
 @media screen and (max-width: 600px) {
