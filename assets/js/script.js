@@ -198,6 +198,18 @@ document.onkeydown = function (e) {
     }
 }
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
+  const body = document.body;
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    icon.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
+});
+
 // Start of Tawk.to Live Chat
 //var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 //(function () {

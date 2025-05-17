@@ -109,23 +109,25 @@ header .navbar li {
   margin-left: 2.5rem;
 }
 header .navbar ul li a {
-  font-size: 1.57rem;
-  color: #0e2431;
-  font-weight: 600;
-  text-decoration: none;
-  letter-spacing: 0.04rem;
-  transition: 0.2s;
+  font-size: 1.7rem;
+  color: #333;
+  padding: 1.5rem;
+  transition: 0.3s;
+  text-align: center;
 }
-header .navbar ul li a.active,
-header .navbar ul li a:hover {
-  color: #c267ff;
-  border-bottom: 0.2rem solid #c267ff;
-  padding: 0.5rem 0;
+header .navbar ul li a:hover,
+header .navbar ul li a.active {
+  color: #946dad;
+  border-bottom: 2px solid #946dad;
 }
 @media (max-width: 768px) {
   header .navbar.nav-toggle {
       right: 0;
   }
+}
+header .navbar {
+  background-color: #fff; /* Or a lighter purple */
+  color: #333;
 }
 
 /* navbar ends */
@@ -218,16 +220,24 @@ header .navbar ul li a:hover {
   z-index: 1;
 }
 .home .image {
-  flex: 1 1 40rem;
-  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
 }
+
 .home .image img {
-  width: 70%;
-  margin-left: 6rem;
+  width: 100%;
+  max-width: 335px;  
+  height: auto;
+  margin: 2rem auto;
+  display: block;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
+
+
 .home .image img:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
@@ -353,6 +363,17 @@ header .navbar ul li a:hover {
 }
 /* hero media queries ends*/
 /* hero section end */
+@media (max-width: 768px) {
+  .home .content h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .home .content p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
 
 /* about section starts */
 .about {
@@ -1721,4 +1742,169 @@ form .button-area {
   gap: 0.5rem;
   box-shadow: 0 4px 20px rgba(148, 109, 173, 0.4); /* Optional: subtle glow */
   transition: background 0.3s ease;
+}
+
+#menu.fa-times {
+  color: #946dad; /* Matches your theme */
+}
+
+
+/* Toggle button styles */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* Adjust sections in dark mode */
+.dark-mode header,
+.dark-mode .footer,
+.dark-mode .project-box,
+.dark-mode .contact .container,
+.dark-mode .card {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.dark-mode a,
+.dark-mode .btn {
+  color: #f0f0f0;
+}
+
+.dark-mode .btn {
+  background-color: #7e57c2;
+}
+
+.dark-mode .btn:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+@media (max-width: 768px) {
+  .home .image img {
+    max-width: 220px;
+  }
+}
+
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+.dark-mode section,
+.dark-mode .home,
+.dark-mode .about,
+.dark-mode .education,
+.dark-mode .experience,
+.dark-mode .projects,
+.dark-mode .contact .container,
+.dark-mode .footer,
+.dark-mode .project-box,
+.dark-mode .card {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.dark-mode a,
+.dark-mode .btn {
+  color: #e0e0e0;
+}
+
+.dark-mode .btn {
+  background-color: #7e57c2;
+}
+
+.dark-mode .btn:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.dark-mode .heading span {
+  color: #bb86fc;
+}
+
+
+.dark-mode header .navbar ul {
+  background-color: #2a2a2a; /* Or same as header */
+}
+
+
+.dark-mode header .navbar ul li a {
+  color: #e0e0e0;
+}
+
+.dark-mode header .navbar ul li a {
+  color: #f0f0f0;
+}
+
+.dark-mode header .navbar ul li a.active,
+.dark-mode header .navbar ul li a:hover {
+  color: #bb86fc;
+  background-color: transparent;
+  border-bottom: 2px solid #bb86fc;
+}
+
+
+header .navbar ul li a.active {
+  font-weight: 600;
+}
+
+
+
+.dark-mode .project-box,
+.dark-mode .card,
+.dark-mode .contact .container,
+.dark-mode .timeline .content,
+.dark-mode .footer,
+.dark-mode .education .box-container .box,
+.dark-mode .resumebtn .btn,
+.dark-mode .cv-options .btn {
+  background-color: #1e1e1e !important;
+  color: #f0f0f0;
+}
+
+.dark-mode .project-box p,
+.dark-mode .card p,
+.dark-mode .contact .container p,
+.dark-mode .experience .desc p,
+.dark-mode .education .box-container .box p {
+  color: #ccc;
+}
+
+.dark-mode .btn {
+  background-color: #7e57c2;
+}
+
+.dark-mode .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+.dark-mode .home,
+.dark-mode .about,
+.dark-mode .experience,
+.dark-mode .education,
+.dark-mode .projects,
+.dark-mode .contact {
+  background-color: #121212;
+}
+.dark-mode .home .content h2,
+.dark-mode .home .content p,
+.dark-mode .home .btn span {
+  color: #f0f0f0;
 }
