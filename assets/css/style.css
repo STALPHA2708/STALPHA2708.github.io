@@ -1427,3 +1427,298 @@ form .button-area {
   width: 100%; /* or set a specific width if needed */
   padding: 20px; /* optional, for spacing */
 }
+
+/* .project-slider-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.project-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.project-box {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-box h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.project-box p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.project-box .btn {
+  background-color: #946dad;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.project-box .btn:hover {
+  background-color: #000;
+} */
+
+
+/* === Slider Wrapper === */
+/* .project-slider-wrapper {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  max-width: 100vw;
+  width: 100%;
+}
+
+.project-slider-wrapper::-webkit-scrollbar {
+  display: none;
+} */
+
+/* === Inner Slider Track === */
+/* .project-slider {
+  display: flex;
+  scroll-behavior: smooth;
+  width: 100vw;
+  overflow: hidden;
+} */
+
+/* === Each Project Card === */
+/* .project-slider .project-box {
+  flex: 0 0 100vw;
+  max-width: 700px;
+  scroll-snap-align: center;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* === Image === */
+/* .project-slider .project-box img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+} */
+
+/* === Title === */
+/* .project-slider .project-box h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* === Description === */
+/* .project-slider .project-box p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}  */
+
+/* === Button === */
+/* .project-slider .project-box .btn {
+  background-color: #946dad;
+  padding: 0.8rem 2rem;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.project-slider .project-box .btn:hover {
+  background-color: #000;
+} */
+.card-stack {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 4rem auto;
+  height: auto;
+  min-height: 500px;
+}
+
+.card-stack .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-stack .card.active {
+  opacity: 1;
+  z-index: 10;
+  pointer-events: all;
+}
+
+.card img {
+  display: block;
+  margin: 0 auto 1.5rem;
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;          /* ✅ Key fix: limits vertical space */
+  object-fit: contain;        /* ✅ Keeps aspect ratio without cropping */
+  border-radius: 8px;
+}
+
+
+
+.card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 1.3rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  display: block; /* make sure it's not inline */
+}
+
+.card p,
+.project-box p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 2rem;
+  text-align: justify;         /* ✅ Aligns both left and right edges */
+  text-justify: inter-word;    /* ✅ Adds spacing for even lines */
+  white-space: normal;
+  word-break: break-word;
+}
+
+
+.card .btn {
+  background-color: #946dad;
+  padding: 0.8rem 2rem;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #000;
+}
+
+.card {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.cv-blurb {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.resumebtn .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  background-color: #946dad;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.resumebtn .btn:hover {
+  background-color: #000;
+}
+
+.cv-options {
+  display: none;
+  margin-top: 1rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.toggle-checkbox:checked ~ .cv-options {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cv-options .btn {
+  margin: 0.5rem 0.75rem;  /* ✅ Adds horizontal spacing between buttons */
+  background-color: #946dad;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 20px rgba(148, 109, 173, 0.4); /* Optional: subtle glow */
+  transition: background 0.3s ease;
+}

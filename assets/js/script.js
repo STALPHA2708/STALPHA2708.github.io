@@ -74,79 +74,98 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Bigdata Technologies", "Generative AI", "ML, Deep Learning & NLP"],
+    strings: [
+  "Scalable AI & Data Systems","Applied Machine Learning Research","Distributed Intelligence & Real-Time Inference","ML, Deep Learning & Scientific Computing","Advance Data Pipelines Architecture"],
     loop: true,
-    typeSpeed: 50,
+    typeSpeed: 80,
     backSpeed: 25,
-    backDelay: 500,
+    backDelay: 100,
 });
 // <!-- typed js effect ends -->
 
 // Dummy data: Replace this with your JSON or fetch call
 const projects = [
-    {
-        name: "Churn Model",
-        desc: "Customer churn is a significant issue for many businesses, and predicting churn can help companies take preventive actions. This project provides a web-based platform for predicting customer churn using a machine learning model. The platform is built using Streamlit, a popular Python framework for creating web applications with ease.",
-        image: "A Smarter Way To Reduce Customer Churn", 
-        codeLink: "https://github.com/STALPHA2708/ChurnModel"
-    },
-    {
-        name: "Credit-Card-Clustering",
-        desc: "Clustering credit cards is a data-driven technique used to group credit card customers into different segments based on their spending behavior, demographic information, or financial attributes. This is typically done to identify distinct customer profiles, tailor marketing strategies, manage risk, or optimize credit card offers.",
-        image: "Banking card design",
-        codeLink: "https://github.com/STALPHA2708/Credit-Card-Clustering"
-    },
-    {
-        name: "AI VS Human",
-        desc: "Detecting AI-generated content involves building a machine learning model that classifies text data. This project demonstrates expertise in handling imbalanced datasets, implementing robust classification models, and using both traditional machine learning techniques and deep learning frameworks to achieve accurate detection.",
-        image: "AI VS HUMAN",
-        codeLink: "https://github.com/STALPHA2708/AI-Vs-Human"
-    },
-    {
-        name: "Impact of Activities on Academic Performance",
-        desc: "This project investigates the effect of extracurricular activities on students' academic performance through data analysis and visualization. The study explores how students manage time between activities and academics. This project demonstrates my ability to collect, analyze, and interpret survey data using visualizations and statistical techniques.",
-        image: "data",
-        codeLink: "https://github.com/STALPHA2708/ProjetIntegrer"
-    },
-    {
-        name: "Face Landmarks Detection",
-        desc: "This project focuses on detecting key facial landmarks, such as eyes, nose, mouth, and jawline, using CV and ML techniques. Applications include facial recognition, emotion analysis, augmented reality filters, and improving human-computer interaction. It demonstrates proficiency in leveraging AI for real-time facial feature analysis and tracking.",
-        image: "landmarks",
-        codeLink: "https://github.com/STALPHA2708/FaceLandmarkDetection"
-    },
-    {
-        name: "Amazon Recommendation System",
-        desc: "This project demonstrates how to build a recommendation system for Amazon-style product recommendations using Python. The system provides personalized recommendations based on product similarity and review scores, leveraging collaborative filtering techniques with minimal dependencies. Plus Fast API",
-        image: "recomendation",
-        codeLink: "https://github.com/STALPHA2708/Amzon-RecSys"
-    }
-  ];
-  
-  // Function to display the projects
-function displayProjects() {
-    const projectContainer = document.querySelector('.project-container');
-    let projectHTML = '';
-
-projects.forEach(project => {
-    projectHTML += `
-        <div class="project-box">
-         <img src="./assets/images/projects/${project.image}.png" alt="${project.name}">
-          <div class="content">
-            <h3>${project.name}</h3>
-            <p>${project.desc}</p>
-            <div class="btns">
-              <a href="${project.codeLink}" target="_blank" class="btn">View Code</a>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-  
-    projectContainer.innerHTML = projectHTML;
+  {
+    name: "Multitask Learning for Arabic Dialects",
+    desc: "This research-focused project explored multitask learning (MTL) techniques for handling various NLP tasks in Arabic dialects, including machine translation, sentiment classification, and diacritization. Implemented a shared-encoder transformer architecture with hierarchical heads and multi-objective optimization. Results showed strong gains over single-task baselines, including a 58% BLEU improvement and 16-point classification accuracy increase. The study contributed to underrepresented language modeling and was co-supervised by academic researchers.",
+    image: "./assets/images/projects/data.png",
+    codeLink: "https://github.com/STALPHA2708/Arabic-Dialects-MTL"
+  },
+  {
+    name: "Real-Time AI Pipeline for PPE Detection",
+    desc: "Developed a full-stack AI system using YOLOv8 for detecting safety equipment in live video. Integrated Kafka, Spark, Trino, and dbt for data handling and monitoring with Grafana. Designed for scalability and industrial deployment.",
+    image: "./assets/images/projects/data.png",
+    codeLink: "https://github.com/STALPHA2708/PPE-Detection"
+  },
+  {
+    name: "Neural Machine Translation – English to Darija",
+    desc: "Built a custom neural translation model for English-to-Moroccan Arabic (Darija) using MarianMT. Applied dialect-specific tokenization and fine-tuning to improve translation fluency for domain-specific use cases.",
+    image: "./assets/images/projects/data.png",
+    codeLink: "https://github.com/STALPHA2708/Darija-Translation"
+  },
+  {
+    name: "Sentiment Analysis for Cancer Patients",
+    desc: "Designed a sentiment analysis tool using transformer-based models to analyze emotional states in cancer support forums. Helped surface emotional patterns to support patient-centered care research.",
+    image: "./assets/images/projects/data.png",
+    codeLink: "https://github.com/STALPHA2708/Cancer-Sentiment-NLP"
+  },
+  {
+    name: "ELK-based Server Log Visualization",
+    desc: "Created a pipeline using Elasticsearch, Logstash, Kibana, and PostgreSQL to analyze and visualize system logs in real time. Designed for anomaly detection and DevOps support.",
+    image: "./assets/images/projects/data.png",
+    codeLink: "https://github.com/STALPHA2708/ELK-Log-Pipeline"
+  },
+  {
+    name: "Twitter Sentiment Analysis",
+    desc: "Analyzed public sentiment on social topics using tweets. Applied text preprocessing, vectorization, and machine learning models like Naive Bayes and LSTM to classify emotional tone.",
+    image: "./assets/images/projects/data.png",
+    codeLink: "https://github.com/STALPHA2708/Twitter-Sentiment"
+  },
+  {
+    name: "AI-Based Academic Plagiarism Detection",
+    desc: "Built a plagiarism detection system using TF-IDF, SVM, and Random Forest to detect non-obvious similarity across academic submissions. Included multilingual support and visual feedback.",
+    image: "./assets/images/projects/data.png",
+    codeLink: "https://github.com/STALPHA2708/AI-Plagiarism-Detector"
   }
-  
-  // Call the function to display projects on page load
-document.addEventListener('DOMContentLoaded', displayProjects);
+];
+
+
+function displayCardStack() {
+  const container = document.querySelector('.card-stack');
+  container.innerHTML = '';
+
+  projects.forEach((project, index) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    if (index === 0) card.classList.add('active');
+
+    card.innerHTML = `
+      <img src="${project.image}" alt="${project.name}">
+      <h3>${project.name}</h3>
+      <p>${project.desc}</p>
+      <a href="${project.codeLink}" target="_blank" class="btn">View Code</a>
+    `;
+
+    card.addEventListener('click', () => {
+  card.classList.remove('active');
+  const next = card.nextElementSibling;
+
+  if (next && next.classList.contains('card')) {
+    next.classList.add('active');
+  } else {
+    // If no next card, restart from the first
+    const first = document.querySelector('.card-stack .card:first-child');
+    if (first) first.classList.add('active');
+  }
+});
+
+
+    container.appendChild(card);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', displayCardStack);
+
   
 
 
