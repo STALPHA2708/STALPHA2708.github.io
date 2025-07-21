@@ -746,6 +746,25 @@ header .navbar {
 .projects {
   padding: 5rem 10%;
   background-color: #ffffff;
+  position: relative;
+}
+
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 80%, rgba(52, 152, 219, 0.03) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.projects > * {
+  position: relative;
+  z-index: 1;
 }
 
 .projects .heading {
@@ -1764,10 +1783,36 @@ form .button-area {
 }
 
 .card {
-  padding: 2rem;
-  max-width: 600px;
+  padding: 2.5rem;
+  max-width: 650px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+}
+
+/* Add subtle pattern overlay */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.02) 0%, rgba(52, 152, 219, 0.05) 100%);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Project navigation indicators */
+.projects::after {
+  content: '';
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
 }
 
 
