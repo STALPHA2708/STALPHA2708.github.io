@@ -752,7 +752,7 @@ header .navbar {
 }
 
 .projects .heading span {
-  color: #946dad; /* Customize this to your theme color */
+  color: #3498db;
 }
 
 /* Project container */
@@ -806,7 +806,7 @@ header .navbar {
 /* Button inside project card */
 .project-container .project-box .btn {
   display: inline-block;
-  background-color: #946dad;
+  background-color: #3498db;
   padding: 0.8rem 2rem;
   color: white;
   text-decoration: none;
@@ -815,31 +815,31 @@ header .navbar {
   font-weight: 600;
   transition: background-color 0.3s, transform 0.3s;
   margin-top: 1rem;
-  text-align: center; /* Space between text and button */
+  text-align: center;
 }
 
 .project-container .project-box .btn:hover {
-  background-color: #000000;
+  background-color: #2980b9;
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
 }
 
 .view-all-btn .btn {
   display: inline-block;
-  padding: 1.5rem 1rem; /* Adjust the padding for a button-like appearance */
+  padding: 1.5rem 1rem;
   color: #fff;
-  background-color: #946dad;
+  background-color: #3498db;
   border-radius: 0.5em;
   font-weight: 600;
   font-size: 1rem;
   text-align: left;
   text-decoration: none;
-  box-shadow: 0px 4px 8px rgba(48, 68, 247, 0.5);
+  box-shadow: 0px 4px 8px rgba(52, 152, 219, 0.4);
   transition: background-color 0.3s;
 }
 
 .view-all-btn .btn:hover {
-  background-color: #000000; /* Change color on hover to match the other button */
+  background-color: #2980b9;
 }
 
 
