@@ -1830,7 +1830,7 @@ form .button-area {
 
 body.dark-mode {
   background-color: #1a1a1a;
-  color: #f0f0f0;
+  color: #e0e0e0;
 }
 
 /* Adjust sections in dark mode */
@@ -1849,12 +1849,13 @@ body.dark-mode {
 }
 
 .dark-mode .btn {
-  background-color: #7e57c2;
+  background-color: #3498db;
+  color: #ffffff;
 }
 
 .dark-mode .btn:hover {
-  background-color: #ffffff;
-  color: #000;
+  background-color: #2980b9;
+  color: #ffffff;
 }
 
 
@@ -1894,12 +1895,13 @@ body.dark-mode {
 }
 
 .dark-mode .btn {
-  background-color: #7e57c2;
+  background-color: #3498db;
+  color: #ffffff;
 }
 
 .dark-mode .btn:hover {
-  background-color: #ffffff;
-  color: #000;
+  background-color: #2980b9;
+  color: #ffffff;
 }
 
 .dark-mode .heading span {
@@ -1968,12 +1970,13 @@ header .navbar ul li a.active {
 }
 
 .dark-mode .btn {
-  background-color: #7e57c2;
+  background-color: #3498db;
+  color: #ffffff;
 }
 
 .dark-mode .btn:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #2980b9;
+  color: #ffffff;
 }
 .dark-mode .home,
 .dark-mode .about,
