@@ -159,7 +159,11 @@ header .navbar {
     height: 100%;
     text-align: left;
     align-items: flex-start;
-    background-color: #0e0f31;
+    background-color: #2a2a2a;
+  }
+
+  .dark-mode header .navbar {
+    background-color: #1a1a1a;
   }
   header .navbar ul {
     flex-flow: column;
@@ -184,7 +188,7 @@ header .navbar {
     padding: 1rem;
     color: #fff;
     border-radius: 0.5rem;
-    border-bottom: 0.5rem solid #011aff;
+    border-bottom: 0.5rem solid #3498db;
   }
   .fa-times {
     transform: rotate(180deg);
