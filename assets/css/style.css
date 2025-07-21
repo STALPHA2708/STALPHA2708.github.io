@@ -1968,23 +1968,15 @@ header .navbar ul li a.active {
 
 
 
-.dark-mode .project-box,
-.dark-mode .card,
-.dark-mode .contact .container,
-.dark-mode .timeline .content,
-.dark-mode .footer,
-.dark-mode .education .box-container .box,
 .dark-mode .resumebtn .btn,
 .dark-mode .cv-options .btn {
-  background-color: #1e1e1e !important;
-  color: #f0f0f0;
+  background-color: #3498db !important;
+  color: #ffffff;
 }
 
 .dark-mode .project-box p,
 .dark-mode .card p,
-.dark-mode .contact .container p,
-.dark-mode .experience .desc p,
-.dark-mode .education .box-container .box p {
+.dark-mode .contact .container p {
   color: #ccc;
 }
 
@@ -2006,7 +1998,18 @@ header .navbar ul li a.active {
   background-color: #121212;
 }
 .dark-mode .home .content h2,
-.dark-mode .home .content p,
-.dark-mode .home .btn span {
-  color: #f0f0f0;
+.dark-mode .home .content p {
+  color: #e0e0e0;
+}
+
+.dark-mode .home .content h2 span {
+  color: #3498db;
+}
+
+.dark-mode .about .row .content .tag {
+  color: #3498db;
+}
+
+.dark-mode .about .row .content .box-container .box p span {
+  color: #3498db;
 }
