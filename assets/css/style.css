@@ -23,6 +23,7 @@ body {
   font-family: "Inter", "Poppins", sans-serif;
   overflow-x: hidden;
   position: relative;
+  color: #333333;
 }
 
 *::selection {
@@ -87,12 +88,12 @@ section {
 }
 .heading {
   font-size: 3.5rem;
-  color: rgb(32, 32, 32);
+  color: #2c3e50;
   font-weight: 800;
   text-align: center;
 }
 .heading span {
-  color: rgb(168, 71, 224);
+  color: #3498db;
 }
 header .logo {
   font-size: 1.9rem;
@@ -410,7 +411,7 @@ header .navbar {
 
 /* about section starts */
 .about {
-  background: #f8f9fa;
+  background: #ffffff;
   position: relative;
 }
 .about .row {
@@ -740,7 +741,7 @@ header .navbar {
 
 .projects {
   padding: 5rem 10%;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .projects .heading {
