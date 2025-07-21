@@ -1,0 +1,16 @@
+{
+  "name": "mohammed-berrhazi-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Mohammed Berrhazi",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s . -l 3000",
+    "dev": "serve -s . -l 3000"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
+  "keywords": ["portfolio", "static", "html", "css", "javascript"],
+  "author": "Mohammed Berrhazi",
+  "license": "MIT"
+}

@@ -88,43 +88,43 @@ const projects = [
   {
     name: "Multitask Learning for Arabic Dialects",
     desc: "This research-focused project explored multitask learning (MTL) techniques for handling various NLP tasks in Arabic dialects, including machine translation, sentiment classification, and diacritization. Implemented a shared-encoder transformer architecture with hierarchical heads and multi-objective optimization. Results showed strong gains over single-task baselines, including a 58% BLEU improvement and 16-point classification accuracy increase. The study contributed to underrepresented language modeling and was co-supervised by academic researchers.",
-    image: "./assets/images/projects/data.png",
+    image: "https://images.pexels.com/photos/30555617/pexels-photo-30555617.jpeg",
     codeLink: "https://github.com/STALPHA2708/Arabic-Dialects-MTL"
   },
   {
     name: "Real-Time AI Pipeline for PPE Detection",
     desc: "Developed a full-stack AI system using YOLOv8 for detecting safety equipment in live video. Integrated Kafka, Spark, Trino, and dbt for data handling and monitoring with Grafana. Designed for scalability and industrial deployment.",
-    image: "./assets/images/projects/data.png",
+    image: "https://images.pexels.com/photos/8853534/pexels-photo-8853534.jpeg",
     codeLink: "https://github.com/STALPHA2708/PPE-Detection"
   },
   {
     name: "Neural Machine Translation – English to Darija",
     desc: "Built a custom neural translation model for English-to-Moroccan Arabic (Darija) using MarianMT. Applied dialect-specific tokenization and fine-tuning to improve translation fluency for domain-specific use cases.",
-    image: "./assets/images/projects/data.png",
+    image: "https://images.pexels.com/photos/267669/pexels-photo-267669.jpeg",
     codeLink: "https://github.com/STALPHA2708/Darija-Translation"
   },
   {
     name: "Sentiment Analysis for Cancer Patients",
     desc: "Designed a sentiment analysis tool using transformer-based models to analyze emotional states in cancer support forums. Helped surface emotional patterns to support patient-centered care research.",
-    image: "./assets/images/projects/data.png",
+    image: "https://images.pexels.com/photos/8442105/pexels-photo-8442105.jpeg",
     codeLink: "https://github.com/STALPHA2708/Cancer-Sentiment-NLP"
   },
   {
     name: "ELK-based Server Log Visualization",
     desc: "Created a pipeline using Elasticsearch, Logstash, Kibana, and PostgreSQL to analyze and visualize system logs in real time. Designed for anomaly detection and DevOps support.",
-    image: "./assets/images/projects/data.png",
+    image: "https://images.pexels.com/photos/577195/pexels-photo-577195.jpeg",
     codeLink: "https://github.com/STALPHA2708/ELK-Log-Pipeline"
   },
   {
     name: "Twitter Sentiment Analysis",
     desc: "Analyzed public sentiment on social topics using tweets. Applied text preprocessing, vectorization, and machine learning models like Naive Bayes and LSTM to classify emotional tone.",
-    image: "./assets/images/projects/data.png",
+    image: "https://images.pexels.com/photos/17894357/pexels-photo-17894357.jpeg",
     codeLink: "https://github.com/STALPHA2708/Twitter-Sentiment"
   },
   {
     name: "AI-Based Academic Plagiarism Detection",
     desc: "Built a plagiarism detection system using TF-IDF, SVM, and Random Forest to detect non-obvious similarity across academic submissions. Included multilingual support and visual feedback.",
-    image: "./assets/images/projects/data.png",
+    image: "https://images.pexels.com/photos/272980/pexels-photo-272980.jpeg",
     codeLink: "https://github.com/STALPHA2708/AI-Plagiarism-Detector"
   }
 ];
