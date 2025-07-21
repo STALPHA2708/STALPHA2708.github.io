@@ -282,21 +282,54 @@
 }
 
 /* Dark mode support */
+.dark-mode .skills-section {
+  background-color: #1a1a1a;
+}
+
 .dark-mode .skill-bubble {
-  background: rgba(42, 42, 42, 0.3);
+  background: rgba(42, 42, 42, 0.5);
   border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .skill-bubble:hover {
+  background: rgba(52, 152, 219, 0.2);
+  border-color: rgba(52, 152, 219, 0.5);
 }
 
 .dark-mode .skill-name {
   color: #e0e0e0;
 }
 
+.dark-mode .skill-icon {
+  color: #3498db;
+}
+
+.dark-mode .skill-bubble:hover .skill-name {
+  color: #ffffff;
+}
+
+.dark-mode .skill-bubble:hover .skill-icon {
+  color: #ffffff;
+}
+
 .dark-mode .skills-heading {
   color: #e0e0e0;
 }
 
+.dark-mode .skills-heading span {
+  color: #3498db;
+}
+
 .dark-mode .skill-level {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .skill-level::after {
+  background: #3498db;
+}
+
+.dark-mode .floating-particle {
+  background: #3498db;
 }
 
 /* Click effect */
