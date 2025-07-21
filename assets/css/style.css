@@ -1773,7 +1773,7 @@ form .button-area {
   gap: 0.5rem;
   font-weight: 600;
   font-size: 1.4rem;
-  background-color: #946dad;
+  background-color: #3498db;
   color: #fff;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
@@ -1782,7 +1782,11 @@ form .button-area {
 }
 
 .resumebtn .btn:hover {
-  background-color: #000;
+  background-color: #2980b9;
+}
+
+.cv-options .btn:hover {
+  background-color: #2980b9;
 }
 
 .cv-options {
@@ -1802,8 +1806,8 @@ form .button-area {
 }
 
 .cv-options .btn {
-  margin: 0.5rem 0.75rem;  /* ✅ Adds horizontal spacing between buttons */
-  background-color: #946dad;
+  margin: 0.5rem 0.75rem;
+  background-color: #3498db;
   color: #fff;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
@@ -1811,7 +1815,7 @@ form .button-area {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 20px rgba(148, 109, 173, 0.4); /* Optional: subtle glow */
+  box-shadow: 0 4px 20px rgba(52, 152, 219, 0.4);
   transition: background 0.3s ease;
 }
 
