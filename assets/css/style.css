@@ -430,7 +430,7 @@ header .navbar {
   width: 30rem;
   height: auto;
   border-radius: 5%;
-  box-shadow: 0 5px 10px #946dad;
+  box-shadow: 0 5px 10px rgba(52, 152, 219, 0.3);
   mix-blend-mode: luminosity;
   transition: 0.3s;
   cursor: pointer;
@@ -448,7 +448,7 @@ header .navbar {
 }
 .about .row .content .tag {
   font-size: 1.4rem;
-  color: #946dad;
+  color: #3498db;
   font-weight: 600;
   margin-top: 1rem;
 }
@@ -470,7 +470,7 @@ header .navbar {
   text-transform: none;
 }
 .about .row .content .box-container .box p span {
-  color: #946dad;
+  color: #3498db;
 }
 .resumebtn {
   margin-top: 6rem;
@@ -487,11 +487,11 @@ header .navbar {
   border-radius: 0.5em;
   transition: 0.3s;
   color: #fff;
-  background: #946dad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  background: #3498db;
+  box-shadow: 0px 5px 10px rgba(52, 152, 219, 0.4);
   font-family: "Nunito", sans-serif;
   display: block;
-  display: inline-block; /* Change to inline-block to fit content */
+  display: inline-block;
   text-align: center;
   cursor: pointer;
   margin-bottom: 1rem;
@@ -512,7 +512,7 @@ header .navbar {
 }
 
 .resumebtn .btn:hover {
-  background: #000000;
+  background: #2980b9;
 }
 
 .resumebtn .btn:hover i {
