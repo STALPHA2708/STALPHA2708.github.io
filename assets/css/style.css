@@ -1995,11 +1995,37 @@ header .navbar ul li a.active {
 }
 .dark-mode .home,
 .dark-mode .about,
-.dark-mode .experience,
-.dark-mode .education,
 .dark-mode .projects,
 .dark-mode .contact {
-  background-color: #121212;
+  background-color: #1a1a1a;
+}
+
+/* Dark mode form styles */
+.dark-mode form .field input,
+.dark-mode form .message textarea {
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+}
+
+.dark-mode .field input::placeholder,
+.dark-mode .message textarea::placeholder {
+  color: #999;
+}
+
+.dark-mode .field input:focus,
+.dark-mode .message textarea:focus {
+  border: 2px solid #3498db;
+  background: #333;
+}
+
+.dark-mode form i {
+  color: #999;
+}
+
+.dark-mode .field input:focus ~ i,
+.dark-mode .message textarea:focus ~ i {
+  color: #3498db;
 }
 .dark-mode .home .content h2,
 .dark-mode .home .content p {
