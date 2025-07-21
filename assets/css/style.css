@@ -1899,25 +1899,11 @@ body.dark-mode {
 .dark-mode .card {
   background-color: #2a2a2a;
   color: #e0e0e0;
-  border: 1px solid rgba(52, 152, 219, 0.2);
-}
-
-.dark-mode .card::before {
-  background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(52, 152, 219, 0.08) 100%);
-}
-
-.dark-mode .card.active {
-  border-color: rgba(52, 152, 219, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .dark-mode .card h3 {
   color: #e0e0e0;
-}
-
-.dark-mode .projects::before {
-  background: radial-gradient(circle at 30% 80%, rgba(52, 152, 219, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.08) 0%, transparent 50%);
 }
 
 .dark-mode .contact .container {
