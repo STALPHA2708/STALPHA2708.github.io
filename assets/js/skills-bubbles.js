@@ -3,21 +3,29 @@ class SkillsBubbles {
     constructor() {
         this.skills = [
             { name: 'Python', icon: 'fab fa-python', level: 'expert', description: 'Advanced Python development with ML/AI frameworks' },
-            { name: 'JavaScript', icon: 'fab fa-js-square', level: 'advanced', description: 'Full-stack JavaScript development' },
             { name: 'Machine Learning', icon: 'fas fa-brain', level: 'expert', description: 'Deep Learning, NLP, Computer Vision' },
-            { name: 'Docker', icon: 'fab fa-docker', level: 'advanced', description: 'Containerization and orchestration' },
-            { name: 'Apache Kafka', icon: 'fas fa-stream', level: 'advanced', description: 'Real-time data streaming' },
-            { name: 'Spark', icon: 'fas fa-fire', level: 'intermediate', description: 'Big data processing' },
             { name: 'TensorFlow', icon: 'fas fa-network-wired', level: 'expert', description: 'Deep learning framework' },
-            { name: 'PyTorch', icon: 'fas fa-torch', level: 'advanced', description: 'Neural networks and research' },
+            { name: 'PyTorch', icon: 'fas fa-fire', level: 'advanced', description: 'Neural networks and research' },
+            { name: 'Transformers', icon: 'fas fa-robot', level: 'expert', description: 'BERT, GPT, T5 models' },
+            { name: 'Apache Spark', icon: 'fas fa-bolt', level: 'advanced', description: 'Big data processing and analytics' },
+            { name: 'Apache Kafka', icon: 'fas fa-stream', level: 'advanced', description: 'Real-time data streaming' },
+            { name: 'Apache Airflow', icon: 'fas fa-wind', level: 'advanced', description: 'Workflow orchestration' },
+            { name: 'dbt', icon: 'fas fa-database', level: 'intermediate', description: 'Data transformation tool' },
+            { name: 'Trino', icon: 'fas fa-search', level: 'intermediate', description: 'Distributed SQL query engine' },
+            { name: 'Apache Iceberg', icon: 'fas fa-mountain', level: 'intermediate', description: 'Table format for analytics' },
+            { name: 'MinIO', icon: 'fas fa-cloud-upload-alt', level: 'intermediate', description: 'Object storage for cloud-native' },
+            { name: 'Elasticsearch', icon: 'fas fa-search-plus', level: 'intermediate', description: 'Search and analytics engine' },
+            { name: 'Docker', icon: 'fab fa-docker', level: 'advanced', description: 'Containerization and orchestration' },
+            { name: 'JavaScript', icon: 'fab fa-js-square', level: 'advanced', description: 'Full-stack JavaScript development' },
             { name: 'React', icon: 'fab fa-react', level: 'intermediate', description: 'Frontend development' },
-            { name: 'Node.js', icon: 'fab fa-node-js', level: 'intermediate', description: 'Backend JavaScript runtime' },
             { name: 'PostgreSQL', icon: 'fas fa-database', level: 'advanced', description: 'Relational database management' },
             { name: 'MongoDB', icon: 'fas fa-leaf', level: 'intermediate', description: 'NoSQL database' },
             { name: 'AWS', icon: 'fab fa-aws', level: 'intermediate', description: 'Cloud computing services' },
             { name: 'Git', icon: 'fab fa-git-alt', level: 'expert', description: 'Version control system' },
             { name: 'Linux', icon: 'fab fa-linux', level: 'advanced', description: 'Unix/Linux system administration' },
-            { name: 'Kubernetes', icon: 'fas fa-dharmachakra', level: 'beginner', description: 'Container orchestration' }
+            { name: 'Kubernetes', icon: 'fas fa-dharmachakra', level: 'beginner', description: 'Container orchestration' },
+            { name: 'Grafana', icon: 'fas fa-chart-line', level: 'intermediate', description: 'Monitoring and observability' },
+            { name: 'Scikit-learn', icon: 'fas fa-cogs', level: 'expert', description: 'Machine learning library' }
         ];
         
         this.init();
