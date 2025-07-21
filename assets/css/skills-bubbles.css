@@ -173,7 +173,7 @@
   position: absolute;
   width: 4px;
   height: 4px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #3498db;
   border-radius: 50%;
   opacity: 0.6;
   animation: particleFloat 20s linear infinite;
@@ -318,9 +318,9 @@
 
 /* Glow effect for advanced skills */
 .skill-bubble[data-level="expert"] {
-  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
 }
 
 .skill-bubble[data-level="expert"]:hover {
-  box-shadow: 0 0 40px rgba(102, 126, 234, 0.6);
+  box-shadow: 0 0 40px rgba(52, 152, 219, 0.6);
 }
