@@ -746,25 +746,6 @@ header .navbar {
 .projects {
   padding: 5rem 10%;
   background-color: #ffffff;
-  position: relative;
-}
-
-.projects::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 30% 80%, rgba(52, 152, 219, 0.03) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.03) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.projects > * {
-  position: relative;
-  z-index: 1;
 }
 
 .projects .heading {
@@ -1666,17 +1647,15 @@ form .button-area {
   left: 0;
   width: 100%;
   background: #ffffff;
-  border: 1px solid rgba(52, 152, 219, 0.1);
-  border-radius: 20px;
-  padding: 2.5rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 1;
   opacity: 0;
   pointer-events: none;
   transform: translateY(20px) scale(0.95);
-  overflow: hidden;
-  position: relative;
 }
 
 .card-stack .card.active {
@@ -1685,8 +1664,7 @@ form .button-area {
   pointer-events: all;
   transform: translateY(0) scale(1);
   background: #ffffff;
-  box-shadow: 0 20px 40px rgba(52, 152, 219, 0.12);
-  border-color: rgba(52, 152, 219, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
@@ -1783,36 +1761,10 @@ form .button-area {
 }
 
 .card {
-  padding: 2.5rem;
-  max-width: 650px;
+  padding: 2rem;
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  position: relative;
-}
-
-/* Add subtle pattern overlay */
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(52, 152, 219, 0.02) 0%, rgba(52, 152, 219, 0.05) 100%);
-  border-radius: 20px;
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Project navigation indicators */
-.projects::after {
-  content: '';
-  display: block;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 1.1rem;
-  color: #666;
-  font-weight: 500;
 }
 
 
