@@ -1,0 +1,330 @@
+/* Floating Skills Bubbles */
+.skills-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 5rem 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.skills-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.skills-heading {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 4rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.skills-heading span {
+  color: #667eea;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.skills-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-bubble {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.skill-bubble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.skill-bubble:hover::before {
+  opacity: 0.2;
+}
+
+.skill-bubble:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+  border-color: rgba(102, 126, 234, 0.5);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #667eea;
+  transition: all 0.3s ease;
+}
+
+.skill-bubble:hover .skill-icon {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.skill-bubble:hover .skill-name {
+  color: #fff;
+}
+
+/* Floating animation */
+.skill-bubble.floating {
+  animation: bubbleFloat 3s ease-in-out infinite;
+}
+
+.skill-bubble:nth-child(2n) {
+  animation-delay: -1s;
+}
+
+.skill-bubble:nth-child(3n) {
+  animation-delay: -2s;
+}
+
+@keyframes bubbleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Skill level indicator */
+.skill-level {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-level::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+  transition: width 1s ease;
+}
+
+.skill-bubble[data-level="beginner"] .skill-level::after { width: 30%; }
+.skill-bubble[data-level="intermediate"] .skill-level::after { width: 60%; }
+.skill-bubble[data-level="advanced"] .skill-level::after { width: 90%; }
+.skill-bubble[data-level="expert"] .skill-level::after { width: 100%; }
+
+/* Particle background */
+.skills-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.floating-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: particleFloat 20s linear infinite;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Interactive tooltip */
+.skill-tooltip {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  white-space: nowrap;
+  z-index: 100;
+}
+
+.skill-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.8);
+}
+
+.skill-bubble:hover .skill-tooltip {
+  opacity: 1;
+  bottom: -40px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .skill-bubble {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+  }
+  
+  .skill-name {
+    font-size: 0.8rem;
+  }
+  
+  .skills-heading {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+  }
+  
+  .skill-bubble {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .skill-icon {
+    font-size: 1.5rem;
+  }
+  
+  .skill-name {
+    font-size: 0.7rem;
+  }
+}
+
+/* Dark mode support */
+.dark-mode .skill-bubble {
+  background: rgba(42, 42, 42, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .skill-name {
+  color: #e0e0e0;
+}
+
+.dark-mode .skills-heading {
+  color: #e0e0e0;
+}
+
+.dark-mode .skill-level {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Click effect */
+.skill-bubble.clicked {
+  animation: clickPulse 0.6s ease;
+}
+
+@keyframes clickPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Glow effect for advanced skills */
+.skill-bubble[data-level="expert"] {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.skill-bubble[data-level="expert"]:hover {
+  box-shadow: 0 0 40px rgba(102, 126, 234, 0.6);
+}
